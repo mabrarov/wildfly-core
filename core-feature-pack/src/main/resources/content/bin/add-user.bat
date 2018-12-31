@@ -48,7 +48,7 @@ if "x%JAVA_HOME%" == "x" (
 
 rem set default modular jvm parameters
 setlocal EnableDelayedExpansion
-call "!DIRNAME!common.bat" :setDefaultModularJvmOptions "!JAVA_OPTS!"
+call "!DIRNAME!common.bat" :setDefaultModularJvmOptions !JAVA_OPTS!
 set "JAVA_OPTS=!JAVA_OPTS! !DEFAULT_MODULAR_JVM_OPTIONS!"
 setlocal DisableDelayedExpansion
 

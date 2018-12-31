@@ -9,7 +9,7 @@ goto :eof
 :setDefaultModularJvmOptions
   call :setModularJdk
   if "!MODULAR_JDK!" == "true" (
-    echo "%~1" | findstr /I "\-\-add\-modules" > nul
+    echo %* | findstr /I "\-\-add\-modules" > nul
     if errorlevel == 1 (
       rem Set default modular jdk options
       set "DEFAULT_MODULAR_JVM_OPTIONS=!DEFAULT_MODULAR_JVM_OPTIONS! --add-exports=java.base/sun.nio.ch=ALL-UNNAMED"
